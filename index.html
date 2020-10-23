@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Character Generator</title>
+    <!--Bootstrap CDN's-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <script src="random_generator.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <h1>Random Dungeons and Dragons 5E Character Generator</h1>
+    </div>
+    <div class="row justify-content-center">
+        <p>Randomly selects a name, race, class, and stats for a DnD 5E player character.</p>
+    </div>
+</div>
+
+<form>
+    <div class="form-row justify-content-center">
+
+        <div class="col-auto">
+
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name">
+        </div>
+
+        <div class="col-auto">
+
+            <label for="race">Race: </label>
+            <select id="race" name="race">
+                <option value="Dragonborn">Dragonborn</option>
+                <option value="Dwarf">Dwarf</option>
+                <option value="Elf">Elf</option>
+                <option value="Gnome">Gnome</option>
+                <option value="Half-Elf">Half-Elf</option>
+                <option value="Halfling">Halfling</option>
+                <option value="Half-Orc">Half-Orc</option>
+                <option value="Human">Human</option>
+                <option value="Tiefling">Tiefling</option>
+            </select>
+        </div>
+
+        <div class="col-auto">
+
+            <label for="class">Class: </label>
+            <select id="class" name="class">
+                <option value="Barbarian">Barbarian</option>
+                <option value="Bard">Bard</option>
+                <option value="Cleric">Cleric</option>
+                <option value="Druid">Druid</option>
+                <option value="Fighter">Fighter</option>
+                <option value="Monk">Monk</option>
+                <option value="Paladin">Paladin</option>
+                <option value="Ranger">Ranger</option>
+                <option value="Rouge">Rouge</option>
+                <option value="Sorcerer">Sorcerer</option>
+                <option value="Warlock">Warlock</option>
+                <option value="Wizard">Wizard</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-row justify-content-center">
+        <label for="Strength">Strength</label>
+        <input id="Strength" type="number" max="20">
+        <label for="Dexterity">Dexterity</label>
+        <input id="Dexterity" type="number" max="20">
+        <label for="Constitution">Constitution</label>
+        <input id="Constitution" type="number" max="20">
+    </div>
+    <div class="form-row justify-content-center">
+        <label for="Intelligence">Intelligence</label>
+        <input id="Intelligence" type="number" max="20">
+        <label for="Wisdom">Wisdom</label>
+        <input id="Wisdom" type="number" max="20">
+        <label for="Charisma">Charisma</label>
+        <input id="Charisma" max="20" type="number">
+    </div>
+
+</form>
+
+</body>
+</html>
