@@ -2,6 +2,10 @@ $(document).ready(function () {
 
     generateCharacter();
 
+    $('#regenerate').click(function () {
+        generateCharacter();
+    });
+
     function generateCharacter() {
 
         pickRandomSex();
