@@ -14,6 +14,8 @@ $(document).ready(function () {
 
         rollAllStats();
 
+        //todo add stat modifiers
+
     }
 
     function pickRandomSex() {
@@ -37,7 +39,7 @@ $(document).ready(function () {
     }
 
     function pickRandomName() {
-        $('#name').val("Bob");
+        $('#name').val("Bob"); //todo: random name logic
     }
 
     function pickRandomClass() {
