@@ -1,17 +1,65 @@
 $(document).ready(function () {
 
+    generateCharacter();
+
+    function generateCharacter() {
+
+        pickRandomSex();
+
+        pickRandomRace();
+
+        pickRandomName();
+
+        pickRandomClass();
+
+        rollAllStats();
+
+    }
+
+    function pickRandomSex() {
+        let sex = Math.floor(Math.random() * 2);
+
+        switch (sex) {
+            case 0:
+                $('#male').prop("checked", true);
+                return;
+            case 1:
+                $('#female').prop("checked", true);
+                return;
+        }
+    }
+
+
     function pickRandomRace() {
-        const select  = $('#race');
-        const options = select.children;
-        const random  = Math.floor(Math.random() * options.length);
-        select.value = options[random].value;
+        const length  = $('#race').children('option').length;
+        const index = Math.floor(Math.random() * length);
+        $("#race>option").eq(index).prop('selected', true);
+    }
+
+    function pickRandomName() {
+        $('#name').val("Bob");
     }
 
     function pickRandomClass() {
-        const select  = $('#class');
-        const options = select.children;
-        const random  = Math.floor(Math.random() * options.length);
-        select.value = options[random].value;
+        const length  = $('#class').children('option').length;
+        const index = Math.floor(Math.random() * length);
+        $("#class>option").eq(index).prop('selected', true);
+    }
+
+    function rollAllStats() {
+
+        $('#Strength').val(rollRandomStat());
+
+        $('#Dexterity').val(rollRandomStat());
+
+        $('#Constitution').val(rollRandomStat());
+
+        $('#Intelligence').val(rollRandomStat());
+
+        $('#Wisdom').val(rollRandomStat());
+
+        $('#Charisma').val(rollRandomStat());
+
     }
 
     function rollRandomStat() {
@@ -32,9 +80,11 @@ $(document).ready(function () {
     }
 
     function dropLowestScore(dice) {
+
         let lowestRoll = 6;
         let lowestRollIndex = 0;
 
+        //determine lowest roll
         for (let i = 0; i < 4; i++) {
             if (dice[i] < lowestRoll) {
                 lowestRoll = dice[i];
@@ -42,7 +92,12 @@ $(document).ready(function () {
             }
         }
 
-        dice.remove(lowestRollIndex);
+        //set it to zero - effectively removing it
+        for (let i = 0; i < 4; i++) {
+            if (i === lowestRollIndex) {
+                dice[i] = 0;
+            }
+        }
 
         return dice;
     }
@@ -51,7 +106,7 @@ $(document).ready(function () {
 
         let total = 0;
 
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 4; i++) {
             total += dice[i];
         }
 

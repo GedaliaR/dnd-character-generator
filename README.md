@@ -1,7 +1,7 @@
 # dnd-character-generator 
 A Dungeons and Dragons 5E random character generator
 
-Web App to generate the name, race, class, and stats for a DnD 5E player character.
+Web App to generate the name, sex, race, class, and stats for a DnD 5E player character.
 
 More features to follow (hopefully 😁)
 
