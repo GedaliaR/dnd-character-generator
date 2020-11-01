@@ -1,0 +1,15 @@
+body {
+    background-image: linear-gradient(to right, rgba(255, 254, 98, 0), rgba(255, 0, 0, 1));
+}
+
+h1{
+    font-family: dndcregular;
+}
+
+@font-face {
+    font-family: 'dndcregular';
+    src: url('/styles/dndc-webfont.woff2') format('woff2'),
+         url('/styles/dndc-webfont.woff') format('woff');
+         url('/styles/DnDC.ttf') format('truetype');
+
+}

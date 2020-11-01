@@ -1,10 +1,14 @@
 $(document).ready(function () {
 
+    let msex, mrace;
+
     generateCharacter();
 
     $('#regenerate').click(function () {
         generateCharacter();
     });
+
+
 
     function generateCharacter() {
 
@@ -18,8 +22,6 @@ $(document).ready(function () {
 
         rollAllStats();
 
-        //todo add stat modifiers
-
     }
 
     function pickRandomSex() {
@@ -28,26 +30,36 @@ $(document).ready(function () {
         switch (sex) {
             case 0:
                 $('#male').prop("checked", true);
+                msex = 'male';
                 return;
             case 1:
                 $('#female').prop("checked", true);
+                msex = 'female';
                 return;
         }
     }
 
 
     function pickRandomRace() {
-        const length  = $('#race').children('option').length;
+        let select = $('#race');
+
+        const length  = select.children('option').length;
         const index = Math.floor(Math.random() * length);
         $("#race>option").eq(index).prop('selected', true);
+
+        mrace = select.val();
     }
 
     function pickRandomName() {
-        $('#name').val("Bob"); //todo: random name logic
+        let name = $('#name');
+
+        name.val("Bob"); //todo: random name logic
     }
 
     function pickRandomClass() {
-        const length  = $('#class').children('option').length;
+        let fclass = $('#class');
+
+        const length  = fclass.children('option').length;
         const index = Math.floor(Math.random() * length);
         $("#class>option").eq(index).prop('selected', true);
     }
@@ -118,4 +130,5 @@ $(document).ready(function () {
 
         return total;
     }
+
 });

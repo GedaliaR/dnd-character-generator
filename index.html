@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
@@ -21,11 +23,12 @@
             crossorigin="anonymous"></script>
 
     <script src="random_generator.js"></script>
+    <link type="text/css" rel="stylesheet" href="styles/styles.css"/>
 
 </head>
 
 <body>
-
+<br>
 <div class="container">
     <div class="row justify-content-center">
         <h1>Random Dungeons and Dragons 5E Character Generator</h1>
@@ -94,24 +97,24 @@
         </div>
     </div>
     <br>
-    <div class="form-row justify-content-center">
-        <label for="Strength">Strength</label>
-        <input id="Strength" type="number" max="20">
-        <label for="Dexterity">Dexterity</label>
-        <input id="Dexterity" type="number" max="20">
-        <label for="Constitution">Constitution</label>
-        <input id="Constitution" type="number" max="20">
-    </div>
-    <br>
-    <div class="form-row justify-content-center">
-        <label for="Intelligence">Intelligence</label>
-        <input id="Intelligence" type="number" max="20">
-        <label for="Wisdom">Wisdom</label>
-        <input id="Wisdom" type="number" max="20">
-        <label for="Charisma">Charisma</label>
-        <input id="Charisma" max="20" type="number">
-    </div>
+        <div class="form-row justify-content-center">
 
+            <label for="Strength">Strength</label>
+            <input class="stats" id="Strength" type="number" max="20">
+            <label for="Dexterity">Dexterity</label>
+            <input class="stats" id="Dexterity" type="number" max="20">
+            <label for="Constitution">Constitution</label>
+            <input class="stats" id="Constitution" type="number" max="20">
+        </div>
+        <br>
+        <div class="form-row justify-content-center">
+            <label for="Intelligence">Intelligence</label>
+            <input class="stats" id="Intelligence" type="number" max="20">
+            <label for="Wisdom">Wisdom</label>
+            <input class="stats" id="Wisdom" type="number" max="20">
+            <label for="Charisma">Charisma</label>
+            <input class="stats" id="Charisma" max="20" type="number">
+        </div>
 </form>
 
 <br>
