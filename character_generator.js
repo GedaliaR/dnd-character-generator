@@ -51,9 +51,9 @@ $(document).ready(function () {
     }
 
     function pickRandomName() {
-        let name = $('#name');
+        let name = generateName(msex, mrace);
 
-        name.val("Bob"); //todo: random name logic
+        $("#name").val(name);
     }
 
     function pickRandomClass() {
