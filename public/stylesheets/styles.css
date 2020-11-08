@@ -8,8 +8,8 @@ h1{
 
 @font-face {
     font-family: 'dndcregular';
-    src: url('/styles/dndc-webfont.woff2') format('woff2'),
-         url('/styles/dndc-webfont.woff') format('woff');
-         url('/styles/DnDC.ttf') format('truetype');
+    src: url('font/dndc-webfont.woff2') format('woff2'),
+         url('font/dndc-webfont.woff') format('woff');
+         url('font/DnDC.ttf') format('truetype');
 
 }

@@ -186,6 +186,6 @@ const generateTieflingName = function (sex) {
 
 const isBadWord = function (s) {
 
-    
+
 
 };
