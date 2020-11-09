@@ -1,3 +1,5 @@
+let nameGen = require('./name_generator.js');
+
 $(document).ready(function () {
 
     let msex, mrace;
@@ -51,7 +53,7 @@ $(document).ready(function () {
     }
 
     function pickRandomName() {
-        let name = generateName(msex, mrace);
+        let name = nameGen.generateName(msex, mrace);
 
         $("#name").val(name);
     }

@@ -1,4 +1,7 @@
-const generateName = function (sex, race) {
+let filter = require('./profanity_checker.js');
+
+module.exports.generateName = function (sex, race) {
+
     let res;
 
     switch (race) {
@@ -44,7 +47,7 @@ const generateDragonbornName = function (sex) {
 
     }
 
-    if (isBadWord(name))
+    if (filter.isProfane(name))
         generateDragonbornName(sex);
 
     return name;
@@ -61,7 +64,7 @@ const generateDwarfName = function (sex) {
 
     }
 
-    if (isBadWord(name))
+    if (filter.isProfane(name))
         generateDwarfName(sex);
 
     return name;
@@ -78,7 +81,7 @@ const generateElfName = function (sex) {
 
     }
 
-    if (isBadWord(name))
+    if (filter.isProfane(name))
         generateElfName(sex);
 
     return name;
@@ -95,7 +98,7 @@ const generateGnomeName = function (sex) {
 
     }
 
-    if (isBadWord(name))
+    if (filter.isProfane(name))
         generateGnomeName(sex);
 
     return name;
@@ -111,7 +114,7 @@ const generateHalfElfName = function (sex) {
 
     }
 
-    if (isBadWord(name))
+    if (filter.isProfane(name))
         generateHalfElfName(sex);
 
     return name;
@@ -127,7 +130,7 @@ const generateHalflingName = function (sex) {
 
     }
 
-    if (isBadWord(name))
+    if (filter.isProfane(name))
         generateHalflingName(sex);
 
     return name;
@@ -144,7 +147,7 @@ const generateHalfOrcName = function (sex) {
 
     }
 
-    if (isBadWord(name))
+    if (filter.isProfane(name))
         generateHalfOrcName(sex);
 
     return name;
@@ -161,7 +164,7 @@ const generateHumanName = function (sex) {
 
     }
 
-    if (isBadWord(name))
+    if (filter.isProfane(name))
         generateHumanName(sex);
 
     return name;
@@ -178,14 +181,8 @@ const generateTieflingName = function (sex) {
 
     }
 
-    if (isBadWord(name))
+    if (filter.isProfane(name))
         generateTieflingName(sex);
 
     return name;
-};
-
-const isBadWord = function (s) {
-
-
-
 };
