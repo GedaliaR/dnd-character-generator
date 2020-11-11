@@ -47,7 +47,7 @@ $(document).ready(function () {
 
         const length  = select.children('option').length;
         const index = Math.floor(Math.random() * length);
-        $("#race>option").eq(7).prop('selected', true);
+        $("#race>option").eq(index).prop('selected', true);
 
         mrace = select.val();
     }

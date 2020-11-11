@@ -48,7 +48,7 @@ $(document).ready(function () {
 
         const length  = select.children('option').length;
         const index = Math.floor(Math.random() * length);
-        $("#race>option").eq(7).prop('selected', true);
+        $("#race>option").eq(index).prop('selected', true);
 
         mrace = select.val();
     }
@@ -198,6 +198,9 @@ function generateNameFromLists(lists) {
         name += lists[i][Math.random() * lists[i].length | 0];
 
     }
+
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+
     return name;
 }
 },{"./profanity_checker.js":3,"./race_names/dragonborn_gen.js":4,"./race_names/dwarf_gen.js":5,"./race_names/elf_gen.js":6,"./race_names/gnome_gen.js":7,"./race_names/half-elf_gen.js":8,"./race_names/half-orc_gen.js":9,"./race_names/halfling_gen.js":10,"./race_names/human_gen.js":11,"./race_names/tiefling_gen.js":12}],3:[function(require,module,exports){
@@ -210,8 +213,8 @@ module.exports.isProfane = function(s) {
 },{"bad-words":13}],4:[function(require,module,exports){
 module.exports.generateDragonbornNameLists = function (sex) {
 
-    let nameList1;
-    let nameList2;
+    let nameList1 = [''];
+    let nameList2 = [''];
 
     if (sex === 'male') {
         nameList1 = ["Ali", "Ar", "Ba", "Bal", "Bel", "Bha", "Bren", "Caer", "Calu", "Dur", "Do", "Dra", "Era", "Faer", "Fro", "Gre", "Ghe", "Gora", "He", "Hi", "Ior", "Jin", "Jar", "Kil", "Kriv", "Lor", "Lumi", "Mar", "Mor", "Med", "Nar", "Nes", "Na", "Oti", "Orla", "Pri", "Pa", "Qel", "Ravo", "Ras", "Rho", "Sa", "Sha", "Sul", "Taz", "To", "Trou", "Udo", "Uro", "Vor", "Vyu", "Vrak", "Wor", "Wu", "Wra", "Wul", "Xar", "Yor", "Zor", "Zra"];
@@ -224,8 +227,8 @@ module.exports.generateDragonbornNameLists = function (sex) {
 };
 },{}],5:[function(require,module,exports){
 module.exports.generateDwarfNameLists = function (sex) {
-    let nameList1;
-    let nameList2;
+    let nameList1 = [''];
+    let nameList2 = [''];
 
     if (sex === 'male') {
         nameList1 = ["Ad", "Am", "Arm", "Baer", "Daer", "Bal", "Ban", "Bar", "Bel", "Ben", "Ber", "Bhal", "Bhar", "Bhel", "Bram", "Bran", "Brom", "Brum", "Bun", "Dal", "Dar", "Dol", "Dul", "Eb", "Em", "Erm", "Far", "Gal", "Gar", "Ger", "Gim", "Gral", "Gram", "Gran", "Grem", "Gren", "Gril", "Gry", "Gul", "Har", "Hjal", "Hjol", "Hjul", "Hor", "Hul", "Hur", "Kar", "Khar", "Kram", "Krom", "Krum", "Mag", "Mal", "Mel", "Mor", "Muir", "Mur", "Rag", "Ran", "Reg", "Rot", "Thal", "Thar", "Thel", "Ther", "Tho", "Thor", "Thul", "Thur", "Thy", "Tor", "Ty", "Um", "Urm", "Von"];
@@ -238,8 +241,8 @@ module.exports.generateDwarfNameLists = function (sex) {
 };
 },{}],6:[function(require,module,exports){
 module.exports.generateElfNameLists = function (sex) {
-    let nameList1;
-    let nameList2;
+    let nameList1 = [''];
+    let nameList2 = [''];
 
     if (sex === 'male') {
         nameList1 = ["Ad", "Ae", "Bal", "Bei", "Car", "Cra", "Dae", "Dor", "El", "Ela", "Er", "Far", "Fen", "Gen", "Glyn", "Hei", "Her", "Ian", "Ili", "Kea", "Kel", "Leo", "Lu", "Mira", "Mor", "Nae", "Nor", "Olo", "Oma", "Pa", "Per", "Pet", "Qi", "Qin", "Ralo", "Ro", "Sar", "Syl", "The", "Tra", "Ume", "Uri", "Va", "Vir", "Waes", "Wran", "Yel", "Yin", "Zin", "Zum"];
@@ -253,8 +256,8 @@ module.exports.generateElfNameLists = function (sex) {
 
 },{}],7:[function(require,module,exports){
 module.exports.generateGnomeNameLists = function (sex) {
-    let nameList1;
-    let nameList2;
+    let nameList1 = [''];
+    let nameList2 = [''];
 
     if (sex === 'male') {
         nameList1 = ["Al", "Ari", "Bil", "Bri", "Cal", "Cor", "Dav", "Dor", "Eni", "Er", "Far", "Fel", "Ga", "Gra", "His", "Hor", "Ian", "Ipa", "Je", "Jor", "Kas", "Kel", "Lan", "Lo", "Man", "Mer", "Nes", "Ni", "Or", "Oru", "Pana", "Po", "Qua", "Quo", "Ras", "Ron", "Sa", "Sal", "Sin", "Tan", "To", "Tra", "Um", "Uri", "Val", "Vor", "War", "Wil", "Wre", "Xal", "Xo", "Ye", "Yos", "Zan", "Zil"];
@@ -268,8 +271,8 @@ module.exports.generateGnomeNameLists = function (sex) {
 
 },{}],8:[function(require,module,exports){
 module.exports.generateHalfElfNameLists = function (sex) {
-    let nameList1;
-    let nameList2;
+    let nameList1 = [''];
+    let nameList2 = [''];
 
     if (sex === 'male') {
         nameList1 = ["Al", "Aro", "Bar", "Bel", "Cor", "Cra", "Dav", "Dor", "Eir", "El", "Fal", "Fril", "Gaer", "Gra", "Hal", "Hor", "Ian", "Ilo", "Jam", "Kev", "Kri", "Leo", "Lor", "Mar", "Mei", "Nil", "Nor", "Ori", "Os", "Pan", "Pet", "Quo", "Raf", "Ri", "Sar", "Syl", "Tra", "Tyr", "Uan", "Ul", "Van", "Vic", "Wal", "Wil", "Xan", "Xav", "Yen", "Yor", "Zan", "Zyl"];
@@ -284,9 +287,9 @@ module.exports.generateHalfElfNameLists = function (sex) {
 };
 },{}],9:[function(require,module,exports){
 module.exports.generateHalfOrcNameLists = function (sex) {
-    let nameList1;
-    let nameList2;
-    let nameList3;
+    let nameList1 = [''];
+    let nameList2 = [''];
+    let nameList3 = [''];
 
     if (sex === 'male') {
         nameList1 = ["Ag", "Agg", "Ar", "Arn", "As", "At", "Atr", "B", "Bar", "Bel", "Bor", "Br", "Brak", "C", "Cr", "D", "Dor", "Dr", "Dur", "G", "Gal", "Gan", "Gar", "Gna", "Gor", "Got", "Gr", "Gram", "Grim", "Grom", "Grum", "Gul", "H", "Hag", "Han", "Har", "Hog", "Hon", "Hor", "Hun", "Hur", "K", "Kal", "Kam", "Kar", "Kel", "Kil", "Kom", "Kor", "Kra", "Kru", "Kul", "Kur", "Lum", "M", "Mag", "Mahl", "Mak", "Mal", "Mar", "Mog", "Mok", "Mor", "Mug", "Muk", "Mura", "N", "Oggu", "Ogu", "Ok", "Oll", "Or", "Rek", "Ren", "Ron", "Rona", "S", "Sar", "Sor", "T", "Tan", "Th", "Thar", "Ther", "Thr", "Thur", "Trak", "Truk", "Ug", "Uk", "Ukr", "Ull", "Ur", "Urth", "Urtr", "Z", "Za", "Zar", "Zas", "Zav", "Zev", "Zor", "Zur", "Zus"];
@@ -303,8 +306,9 @@ module.exports.generateHalfOrcNameLists = function (sex) {
 };
 },{}],10:[function(require,module,exports){
 module.exports.generateHalflingNameLists = function (sex) {
-    let nameList1;
-    let nameList2;
+
+    let nameList1 = [''];
+    let nameList2 = [''];
 
     if (sex === 'male') {
         nameList1 = ["An", "Ar", "Bar", "Bel", "Con", "Cor", "Dan", "Dav", "El", "Er", "Fal", "Fin", "Flyn", "Gar", "Go", "Hal", "Hor", "Ido", "Ira", "Jan", "Jo", "Kas", "Kor", "La", "Lin", "Mar", "Mer", "Ne", "Nor", "Ori", "Os", "Pan", "Per", "Pim", "Quin", "Quo", "Ri", "Ric", "San", "Shar", "Tar", "Te", "Ul", "Uri", "Val", "Vin", "Wen", "Wil", "Xan", "Xo", "Yar", "Yen", "Zal", "Zen"];
@@ -321,7 +325,6 @@ module.exports.generateHalflingNameLists = function (sex) {
 module.exports.generateHumanNameLists = function (sex) {
 
     let humanSubRace = Math.random() * 8 | 0;
-    alert(humanSubRace);
 
     let nameList1 = [''];
     let nameList2 = [''];
@@ -447,8 +450,9 @@ module.exports.generateHumanNameLists = function (sex) {
 };
 },{}],12:[function(require,module,exports){
 module.exports.generateTieflingNameLists = function (sex) {
-    let nameList1;
-    let nameList2;
+
+    let nameList1 = [''];
+    let nameList2 = [''];
 
     if (sex === 'male') {
         nameList1 = ["Aet", "Ak", "Am", "Aran", "And", "Ar", "Ark", "Bar", "Car", "Cas", "Dam", "Dhar", "Eb", "Ek", "Er", "Gar", "Gu", "Gue", "Hor", "Ia", "Ka", "Kai", "Kar", "Kil", "Kos", "Ky", "Loke", "Mal", "Male", "Mav", "Me", "Mor", "Neph", "Oz", "Ral", "Re", "Rol", "Sal", "Sha", "Sir", "Ska", "The", "Thy", "Thyne", "Ur", "Uri", "Val", "Xar", "Zar", "Zer", "Zher", "Zor"];

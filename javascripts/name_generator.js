@@ -60,5 +60,8 @@ function generateNameFromLists(lists) {
         name += lists[i][Math.random() * lists[i].length | 0];
 
     }
+
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+
     return name;
 }

@@ -1,7 +1,6 @@
 module.exports.generateHumanNameLists = function (sex) {
 
     let humanSubRace = Math.random() * 8 | 0;
-    alert(humanSubRace);
 
     let nameList1 = [''];
     let nameList2 = [''];
