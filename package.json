@@ -1,0 +1,25 @@
+{
+  "name": "dnd-character-generator",
+  "version": "1.0.0",
+  "description": "A Dungeons and Dragons 5E random character generator",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "browserify javascripts/main.js -o public/bundle.js",
+    "watch": "watchify javascripts/main.js -o public/bundle.js --debug --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GedaliaR/dnd-character-generator.git"
+  },
+  "author": "Gedalia Rabinowitz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GedaliaR/dnd-character-generator/issues"
+  },
+  "homepage": "https://github.com/GedaliaR/dnd-character-generator#readme",
+  "dependencies": {
+    "bad-words": "^3.0.3"
+  }
+}
