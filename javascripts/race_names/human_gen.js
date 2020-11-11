@@ -1,12 +1,13 @@
 module.exports.generateHumanNameLists = function (sex) {
 
     let humanSubRace = Math.random() * 8 | 0;
+    alert(humanSubRace);
 
-    let nameList1 = '';
-    let nameList2 = '';
-    let nameList3 = '';
-    let nameList4 = '';
-    let nameList5 = '';
+    let nameList1 = [''];
+    let nameList2 = [''];
+    let nameList3 = [''];
+    let nameList4 = [''];
+    let nameList5 = [''];
 
     if (sex === 'male') {
         switch (humanSubRace) {
