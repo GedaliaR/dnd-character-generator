@@ -302,7 +302,7 @@ module.exports.generateHalfOrcNameLists = function (sex) {
         nameList3 = ["d", "da", "dar", "dur", "g", "gar", "gh", "gri", "gu", "sh", "sha", "shi", "gum", "gume", "gur", "ki", "mar", "mi", "mira", "me", "mur", "ne", "ner", "nir", "nar", "nchu", "ni", "nur", "ral", "rel", "ri", "rook", "ti", "tah", "tir", "tar", "tur", "war", "z", "zar", "zara", "zi", "zur", "zura", "zira"];
 
     }
-    return [nameList1, nameList2];
+    return [nameList1, nameList2, nameList3];
 };
 },{}],10:[function(require,module,exports){
 module.exports.generateHalflingNameLists = function (sex) {
