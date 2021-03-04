@@ -2,10 +2,10 @@
   "name": "dnd-character-generator",
   "version": "1.0.0",
   "description": "A Dungeons and Dragons 5E random character generator",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node app.js",
     "build": "browserify javascripts/main.js -o public/bundle.js",
     "watch": "watchify javascripts/main.js -o public/bundle.js --debug --verbose"
   },
